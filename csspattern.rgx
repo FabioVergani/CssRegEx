@@ -1,6 +1,9 @@
 const RegularExpression={
  CSS:{
-	PseudoElement:/([:]{1,2}(before|after|first\-(letter|line)))|(::(selection|placeholder|marker|backdrop|(spelling|grammar)\-error|((\-.+\-)((fill(\-(lower|upper))?)|(progress\-(bar|value))|(thumb|track)|(range\-(progress|thumb|track))))))/i,
-	PseudoClasses:/:(hover|focus|active|visited|link|not|empty|scope|target|root|fullscreen|lang|dir|left|right|default|optional|valid|(in(determinate|valid))|((in|out\-of)\-range)|((requir|check|((dis|en)abl))ed)|((first|only|last|(nth(\-last)?))\-(child|of\-type))|first|((\-.+\-)?(any|read\-(write|only))))/i,
+	Pseudo:{
+	 Page:/left|right/i,
+	 Classes:/:(hover|focus|active|visited|link|empty|scope|target|root|fullscreen|default|optional|valid|(in(determinate|valid))|((in|out\-of)\-range)|((requir|check|((dis|en)abl))ed)|((first|only|last)\-(child|of\-type))|((not|lang|any|dir|(nth(\-last)?)\-(child|of\-type))\(.*\))|((\-.+\-)?(read\-(write|only))))/i,
+	 Elements:/([:]{1,2}(before|after|first\-(letter|line)))|(::(marker|backdrop|(spelling|grammar)\-error|((\-.+\-)?((selection|placeholder|fill(\-(lower|upper))?)|(progress\-(bar|value))|(thumb|track)|(range\-(progress|thumb|track))))))/i,
+	}
  }
 };
