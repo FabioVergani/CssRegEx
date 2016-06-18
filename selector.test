@@ -3,3 +3,7 @@ a:link { color: blue } /* unvisited links */
 a:visited { color: purple } /* visited links */
 a:hover { font-weight: bold } /* user hovers */
 a:active { color: lime } /* active links */
+:default
+{
+  background-color: lime;
+}
