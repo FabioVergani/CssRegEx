@@ -8,9 +8,20 @@ const RegularExpressions={
  }
 };
 //
-(function(x){
+
+const exp_allPseudoClassesAndElements=(function(x){
  const o=x.Pseudo;
- o.allClassesAndElements=new RegExp('('+o.Classes.source+')|('+o.Elements.source+')','i');
+ return (o.allClassesAndElements=new RegExp('('+o.Classes.source+')|('+o.Elements.source+')','gi'));
 })(RegularExpressions.CSS);
 //
 console.dir(RegularExpressions);
+//
+
+
+function getElementsByCssQuery(str){
+ const s=String(str).trim();
+ if(s!==''){
+	s.replace(exp_allPseudoClassesAndElements,'');
+ };
+ return s;
+};
