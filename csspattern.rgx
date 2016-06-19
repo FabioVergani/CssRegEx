@@ -1,4 +1,23 @@
 const RegularExpressions={
+ CSS:(function(){
+	const o={},
+	Pseudo=o.Pseudo={
+	 Page:/left|right/i,
+	 Classes:/:(hover|focus|active|visited|link|empty|scope|target|root|fullscreen|default|optional|valid|(in(determinate|valid))|((in|out\-of)\-range)|((requir|check|((dis|en)abl))ed)|((first|only|last)\-(child|of\-type))|((not|lang|any|dir|(nth(\-last)?)\-(child|of\-type))\(.*\))|((\-.+\-)?(read\-(write|only))))/i,
+	 Elements:/([:]{1,2}(before|after|first\-(letter|line)))|(::(marker|backdrop|(spelling|grammar)\-error|((\-.+\-)?((selection|placeholder|fill(\-(lower|upper))?)|(progress\-(bar|value))|(thumb|track)|(range\-(progress|thumb|track))))))/i,
+	};
+	Pseudo.ClassesAndElements=new RegExp('('+Pseudo.Classes.source+')|('+Pseudo.Elements.source+')','gi');
+	return o;
+ })(),
+};
+//
+console.dir(RegularExpressions);
+
+
+
+
+
+const RegularExpressions={
  CSS:{
 	Pseudo:{
 	 Page:/left|right/i,
